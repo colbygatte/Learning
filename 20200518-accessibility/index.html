@@ -1,27 +1,43 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
 <section>
     <h1>Accessible Multi-select FAQ Accordion</h1>
-
-    <dl>
+    <dl class="accordion">
         <dt>
-            <button aria-expanded="true">What resources did you use to build this?</button>
+            <button class="accordion__button" aria-expanded="true" aria-controls="accordion-resources">What resources did you use to build this?</button>
         </dt>
+        <dd class="accordion__content" id="accordion-resources" aria-hidden="false">
+            <ul>
+                <li><a href="https://www.w3.org/TR/wai-aria-practices/#disclosure">Disclosure (FAQ) Design Pattern</a></li>
+                <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/disclosure/disclosure-faq.html">Disclosure (FAQ) Example</a></li>
+                <li><a href="https://www.w3.org/TR/wai-aria-practices/#accordion">Accordion Design Pattern</a></li>
+                <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html">Accordion Example</a></li>
+            </ul>
+        </dd>
 
-        <ul>
-            <li><a href="#">Disclosure (FAQ) Design Pattern</a></li>
-            <li></li>
-        </ul>
+        <dt>
+            <button class="accordion__button" aria-expanded="true" aria-controls="accordion-markup">What are the HTML tags and ARIA attributes used?</button>
+        </dt>
+        <dd class="accordion__content" id="accordion-markup" aria-hidden="false">
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">section</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">dl</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt">dt</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd">dd</a></li>
+                <li><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">aria-expanded</a></li>
+                <li><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-controls">aria-controls</a></li>
+            </ul>
+        </dd>
+
+        <dt>
+            <button class="accordion__button" aria-expanded="true" aria-controls="accordion-behavior">What is the expected behavior of this component?</button>
+        </dt>
+        <dd class="accordion__content" id="accordion-behavior" aria-hidden="false">
+            <ul>
+                <li>Users can tab to an accordion button which will show focus that button</li>
+                <li>When using a keyboard and the NVDA screen reader users can hit Enter or Space to toggle the content for the focused accordion button</li>
+                <li>When using the VO screen reader users can navigate to the button with Control + Option + Space</li>
+                <li>Then when focused on the button, VO users can toggle the content with Control + Option + Space</li>
+            </ul>
+        </dd>
     </dl>
 </section>
-
-</body>
-</html>
